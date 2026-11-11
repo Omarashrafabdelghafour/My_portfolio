@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  
+  <!-- Subtle grid lines -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+  </g>
+
+  <!-- Ambient light circles -->
+  <circle cx="280" cy="220" r="140" fill="#6366f1" opacity="0.2" filter="url(#glow)" />
+  <circle cx="540" cy="280" r="130" fill="#06b6d4" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Left Phone (Main) -->
+  <g transform="translate(260, 40)">
+    <!-- Phone body shadow -->
+    <rect x="-10" y="5" width="220" height="420" rx="36" fill="#000000" opacity="0.4" />
+    <!-- Phone border -->
+    <rect x="0" y="0" width="200" height="410" rx="32" fill="#1e293b" stroke="#334155" stroke-width="3" />
+    <!-- Screen -->
+    <rect x="8" y="8" width="184" height="394" rx="26" fill="#0b0f19" />
+    <!-- Dynamic Island / Speaker notch -->
+    <rect x="65" y="16" width="70" height="14" rx="7" fill="#1e293b" />
+    
+    <!-- App UI Header -->
+    <circle cx="32" cy="52" r="12" fill="url(#accentGrad)" />
+    <rect x="52" y="46" width="60" height="6" rx="3" fill="#f8fafc" />
+    <rect x="52" y="56" width="40" height="4" rx="2" fill="#64748b" />
+    <circle cx="168" cy="52" r="8" fill="#334155" />
+
+    <!-- Balance Card -->
+    <rect x="20" y="78" width="160" height="72" rx="12" fill="url(#accentGrad)" />
+    <text x="32" y="98" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="9" font-weight="500">Total Activity</text>
+    <text x="32" y="122" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">$12,480.50</text>
+    <rect x="32" y="132" width="60" height="8" rx="4" fill="#ffffff" opacity="0.3" />
+
+    <!-- Feature Icons Row -->
+    <rect x="22" y="165" width="34" height="34" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="39" cy="182" r="6" fill="#6366f1" />
+    <rect x="64" y="165" width="34" height="34" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="81" cy="182" r="6" fill="#06b6d4" />
+    <rect x="106" y="165" width="34" height="34" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="123" cy="182" r="6" fill="#10b981" />
+    <rect x="148" y="165" width="34" height="34" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="165" cy="182" r="6" fill="#f59e0b" />
+
+    <!-- Transactions List Items -->
+    <rect x="20" y="215" width="160" height="42" rx="10" fill="#1e293b" opacity="0.8" />
+    <circle cx="38" cy="236" r="10" fill="#6366f1" opacity="0.3" />
+    <rect x="56" y="228" width="55" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="56" y="238" width="35" height="4" rx="2" fill="#64748b" />
+    <rect x="135" y="232" width="32" height="6" rx="3" fill="#10b981" />
+
+    <rect x="20" y="265" width="160" height="42" rx="10" fill="#1e293b" opacity="0.8" />
+    <circle cx="38" cy="286" r="10" fill="#06b6d4" opacity="0.3" />
+    <rect x="56" y="278" width="60" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="56" y="288" width="40" height="4" rx="2" fill="#64748b" />
+    <rect x="140" y="282" width="27" height="6" rx="3" fill="#ef4444" />
+
+    <rect x="20" y="315" width="160" height="42" rx="10" fill="#1e293b" opacity="0.8" />
+    <circle cx="38" cy="336" r="10" fill="#8b5cf6" opacity="0.3" />
+    <rect x="56" y="328" width="50" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="56" y="338" width="30" height="4" rx="2" fill="#64748b" />
+    <rect x="135" y="332" width="32" height="6" rx="3" fill="#10b981" />
+
+    <!-- Bottom Navigation Bar -->
+    <rect x="15" y="368" width="170" height="26" rx="13" fill="#1e293b" />
+    <circle cx="45" cy="381" r="4" fill="#6366f1" />
+    <circle cx="85" cy="381" r="4" fill="#64748b" />
+    <circle cx="115" cy="381" r="4" fill="#64748b" />
+    <circle cx="155" cy="381" r="4" fill="#64748b" />
+  </g>
+
+  <!-- Right Secondary Phone / Angled -->
+  <g transform="translate(480, 80) rotate(8)">
+    <rect x="0" y="0" width="170" height="350" rx="26" fill="#1e293b" stroke="#334155" stroke-width="2" opacity="0.85" />
+    <rect x="7" y="7" width="156" height="336" rx="20" fill="#0b0f19" />
+    <!-- Mini charts in second phone -->
+    <rect x="18" y="30" width="134" height="90" rx="10" fill="#1e293b" />
+    <!-- Bar charts -->
+    <rect x="30" y="80" width="12" height="30" rx="3" fill="#6366f1" />
+    <rect x="50" y="65" width="12" height="45" rx="3" fill="#06b6d4" />
+    <rect x="70" y="55" width="12" height="55" rx="3" fill="#a855f7" />
+    <rect x="90" y="70" width="12" height="40" rx="3" fill="#10b981" />
+    <rect x="110" y="45" width="12" height="65" rx="3" fill="#f59e0b" />
+    <rect x="18" y="130" width="134" height="65" rx="10" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
+    <circle cx="45" cy="162" r="16" fill="none" stroke="#6366f1" stroke-width="4" stroke-dasharray="70 30" />
+    <rect x="72" y="152" width="65" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="72" y="164" width="45" height="5" rx="2" fill="#64748b" />
+  </g>
+
+  <!-- Label Badge Overlay -->
+  <g transform="translate(50, 60)">
+    <rect width="175" height="38" rx="19" fill="#1e293b" stroke="#6366f1" stroke-width="1.5" />
+    <circle cx="20" cy="19" r="6" fill="#10b981" />
+    <text x="35" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">📱 Mobile Development</text>
+  </g>
+
+  <!-- Feature Pills -->
+  <g transform="translate(60, 420)">
+    <rect width="115" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="18" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Cross-Platform</text>
+  </g>
+  <g transform="translate(185, 420)">
+    <rect width="90" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="18" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="500">UI/UX Polish</text>
+  </g>
+  <g transform="translate(285, 420)">
+    <rect width="105" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="18" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="500">API Integration</text>
+  </g>
+</svg>
+

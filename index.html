@@ -3,92 +3,819 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            animation: gradientBG 10s ease infinite alternate;
-        }
-        @keyframes gradientBG {
-            0% { background: linear-gradient(135deg, #f5f7fa, #c3cfe2); }
-            100% { background: linear-gradient(135deg, #c3cfe2, #f5f7fa); }
-        }
-    </style>
-</head>
-<body class="bg-light">
-    <header class="bg-dark text-white text-center py-4">
-        <img src="profile.jpg" alt="Profile Photo" class="rounded-circle img-thumbnail" width="150">
-        <h1 class="mt-2">Omar Ashraf</h1>
-        <p class="lead">Software Engineer | Web Developer | AI Enthusiast</p>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <meta name="description" content="Portfolio of Omar Ashraf — Software Engineer, Mobile App Developer, Data Analyst (Power BI), and Data Scientist (TensorFlow & AI).">
+    <meta name="author" content="Omar Ashraf">
+    <title>Omar Ashraf | Software Engineer, Mobile Developer & Data Analyst</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <section id="about" class="container my-5 text-center">
-        <h2 class="mb-4">About Me</h2>
-        <p class="lead">I'm a passionate software engineer specializing in web development, backend systems, and AI applications.</p>
-    </section>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <section id="skills" class="container my-5 text-center">
-        <h2 class="mb-4">Skills</h2>
-        <div class="row">
-            <div class="col-md-3"><span class="badge bg-primary p-3">JavaScript (React, Node.js)</span></div>
-            <div class="col-md-3"><span class="badge bg-success p-3">Python (Machine Learning, AI)</span></div>
-            <div class="col-md-3"><span class="badge bg-warning text-dark p-3">Database (MongoDB, SQL)</span></div>
-            <div class="col-md-3"><span class="badge bg-info text-dark p-3">Cloud & DevOps (Docker, AWS)</span></div>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background Orbs & Spotlight -->
+    <div class="bg-ambient-layer">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+    <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="brand-badge" href="#hero">
+                <img src="profile.jpg" alt="Omar Ashraf" class="brand-avatar">
+                <span class="brand-name">Omar Ashraf</span>
+            </a>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered fa-lg"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#mobile-spotlight">Mobile App</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="https://wa.me/201122250091" target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-sm py-2 px-3">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+    </nav>
 
-    <section id="projects" class="container my-5">
-        <h2 class="text-center mb-4">Projects</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-3 shadow">
-                    <img src="ecommerce.jpg" class="card-img-top" alt="E-commerce Website">
-                    <div class="card-body">
-                        <h3 class="card-title">E-commerce Website</h3>
-                        <p class="card-text">Built a full-stack e-commerce platform using React, Node.js, and MongoDB.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="profile-frame">
+                        <div class="profile-glow"></div>
+                        <img src="profile.jpg" alt="Omar Ashraf" class="profile-img">
+                        <div class="status-pill">
+                            <span class="pulse-dot"></span> Available for Hire
+                        </div>
+                    </div>
+
+                    <div class="section-tag">
+                        <i class="fa-solid fa-code"></i> Engineering • Analytics • Mobile
+                    </div>
+
+                    <h1 class="display-4 fw-extrabold mb-3">
+                        Hi, I'm <span class="gradient-text">Omar Ashraf</span>
+                    </h1>
+
+                    <div class="typewriter-wrap">
+                        <span id="typewriter-text"></span><span class="typewriter-cursor">&nbsp;</span>
+                    </div>
+
+                    <p class="lead text-light opacity-75 mb-4 mx-auto" style="max-width: 680px; font-size: 1.15rem;">
+                        Building intelligent software solutions: from <strong>interactive mobile apps</strong> and <strong>high-impact Power BI executive dashboards</strong> to <strong>TensorFlow deep learning models</strong> and robust full-stack web platforms.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                        <a href="#projects" class="btn-primary-gradient">
+                            <i class="fa-solid fa-layer-group"></i> Explore Projects
+                        </a>
+                        <a href="#mobile-spotlight" class="btn-glass">
+                            <i class="fa-solid fa-mobile-screen-button"></i> Mobile Showcase
+                        </a>
+                        <a href="#contact" class="btn-glass">
+                            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-4 text-muted pt-2">
+                        <a href="https://github.com/Omarashrafabdelghafour" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" title="GitHub">
+                            <i class="fa-brands fa-github fa-xl text-light"></i>
+                        </a>
+                        <a href="mailto:omarashraf1392@gmail.com" class="text-secondary text-decoration-none" title="Email">
+                            <i class="fa-solid fa-envelope fa-xl text-light"></i>
+                        </a>
+                        <a href="https://wa.me/201122250091" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp fa-xl text-success"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card mb-3 shadow">
-                    <img src="sentiment_analysis.jpg" class="card-img-top" alt="Sentiment Analysis">
-                    <div class="card-body">
-                        <h3 class="card-title">Sentiment Analysis</h3>
-                        <p class="card-text">Developed an AI model for sentiment analysis using NLP techniques.</p>
+        </div>
+    </section>
+
+    <!-- Metrics Row -->
+    <section id="metrics" class="py-4">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="metrics-card">
+                        <div class="metric-number" data-target="4" data-suffix="+">0</div>
+                        <div class="metric-label">Key Tech Domains</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metrics-card">
+                        <div class="metric-number" data-target="100" data-suffix="%">0</div>
+                        <div class="metric-label">Responsive & Cross-Platform</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metrics-card">
+                        <div class="metric-number" data-target="15" data-suffix="+">0</div>
+                        <div class="metric-label">Analytics KPIs & Models</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metrics-card">
+                        <div class="metric-number" data-target="99" data-suffix="%">0</div>
+                        <div class="metric-label">Commitment to Quality</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container my-5 text-center">
-        <h2 class="mb-4">Contact</h2>
-        <p class="lead">Email: omarashraf1392@gmail.com</p>
-        <p class="lead">WhatsApp: <a href="https://wa.me/201122250091" class="text-decoration-none">+20 112 225 0091</a></p>
-        <p class="lead">GitHub: <a href="https://github.com/Omarashrafabdelghafour" class="text-decoration-none">github.com/Omarashrafabdelghafour</a></p>
+    <!-- About Me Section -->
+    <section id="about" class="py-5 my-3">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-user"></i> Overview</div>
+                <h2 class="display-6 fw-bold">About Me</h2>
+                <p class="section-desc">
+                    A versatile Software Engineer driven by turning complex data and user requirements into seamless digital products.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="domain-card p-4 p-md-5">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-5 text-center">
+                                <img src="profile.jpg" alt="Omar Ashraf" class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25" style="max-height: 280px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-7">
+                                <h3 class="h4 mb-3 text-white">Engineering Across Frontend, Mobile & Data</h3>
+                                <p class="text-muted mb-3">
+                                    I specialize in bridging the gap between user-facing application design and intelligent backend analytics. With active expertise in <strong>frontend mobile app development</strong>, <strong>Power BI business intelligence</strong>, and <strong>TensorFlow machine learning</strong>, I build end-to-end solutions that look great and deliver actionable insights.
+                                </p>
+                                <div class="row g-2 pt-2">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center gap-2 text-light small">
+                                            <i class="fa-solid fa-check text-primary"></i> Cross-Platform Mobile Apps
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center gap-2 text-light small">
+                                            <i class="fa-solid fa-check text-info"></i> Power BI & DAX Dashboards
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center gap-2 text-light small">
+                                            <i class="fa-solid fa-check text-warning"></i> TensorFlow & NLP Models
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center gap-2 text-light small">
+                                            <i class="fa-solid fa-check text-success"></i> Full-Stack Web Systems
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
+    <!-- Core Expertise Pillars -->
+    <section id="expertise" class="py-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-cubes"></i> What I Do</div>
+                <h2 class="display-6 fw-bold">Specialized Domains</h2>
+                <p class="section-desc">Delivering polished digital experiences across modern application development and data science.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Mobile App Dev -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="domain-card">
+                        <div class="domain-icon-box icon-mobile">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h4 class="h5 mb-2">Mobile App Dev</h4>
+                        <p class="text-muted small">Developing modern, responsive frontend mobile applications with intuitive UI/UX and native feel.</p>
+                        <ul class="domain-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Cross-platform frameworks</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Interactive UI/UX Design</li>
+                            <li><i class="fa-solid fa-circle-check"></i> AI Try-On & Feature Integrations</li>
+                            <li><i class="fa-solid fa-circle-check"></i> API & State Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Data Analytics & Power BI -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="domain-card">
+                        <div class="domain-icon-box icon-analytics">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="h5 mb-2">Data Analytics</h4>
+                        <p class="text-muted small">Transforming raw business data into decision-making executive dashboards and KPI trackers.</p>
+                        <ul class="domain-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Power BI Dashboards & DAX</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Retail & Supply Chain Analytics</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Financial Ratios & Performance</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Target vs Variance Insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Data Science & AI -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="domain-card">
+                        <div class="domain-icon-box icon-science">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="h5 mb-2">Data Science & AI</h4>
+                        <p class="text-muted small">Designing machine learning and NLP pipelines using TensorFlow and Python for smart automation.</p>
+                        <ul class="domain-features">
+                            <li><i class="fa-solid fa-circle-check"></i> TensorFlow & Deep Learning</li>
+                            <li><i class="fa-solid fa-circle-check"></i> NLP & Sentiment Analysis</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Predictive Machine Learning</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Data Preprocessing (Pandas/NumPy)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Software & Web Engineering -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="domain-card">
+                        <div class="domain-icon-box icon-software">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 class="h5 mb-2">Web Engineering</h4>
+                        <p class="text-muted small">Building scalable full-stack web applications, REST APIs, and database-driven cloud architectures.</p>
+                        <ul class="domain-features">
+                            <li><i class="fa-solid fa-circle-check"></i> JavaScript (ES6+), React.js</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Node.js & RESTful APIs</li>
+                            <li><i class="fa-solid fa-circle-check"></i> MongoDB & SQL Databases</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Git, Version Control & CI/CD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Spotlight Interactive Section -->
+    <section id="mobile-spotlight" class="py-5 my-4">
+        <div class="container">
+            <div class="mobile-showcase-box">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Interactive Mobile Spotlight</div>
+                        <h2 class="display-6 fw-bold mb-3">Tal2a — AI-Powered Fashion Mobile App</h2>
+                        <p class="text-light opacity-75 mb-4">
+                            A next-generation mobile shopping experience built with modern frontend frameworks. Featuring local brand collections (Mobaco, Tie House), seamless product browsing, and an innovative <strong>AI Try-On</strong> integration for previewing outfits in real time.
+                        </p>
+
+                        <!-- Interactive Screen Switchers -->
+                        <div class="mb-4">
+                            <p class="text-muted small fw-semibold text-uppercase mb-2">Click to switch mobile screen view:</p>
+                            <div class="d-flex flex-column gap-2">
+                                <button class="phone-tab-btn active" data-screen-src="tal2a-mobile-home.jpg">
+                                    <i class="fa-solid fa-house text-primary"></i>
+                                    <div>
+                                        <strong>1. Home & Featured Collections</strong>
+                                        <div class="small opacity-75">Winter '24 showcase, local brand spotlights & top categories</div>
+                                    </div>
+                                </button>
+                                <button class="phone-tab-btn" data-screen-src="tal2a-mobile-catalog.jpg">
+                                    <i class="fa-solid fa-magnifying-glass text-info"></i>
+                                    <div>
+                                        <strong>2. Products Catalog & Live Filter</strong>
+                                        <div class="small opacity-75">Real-time search, price points, and instant AI Try-On triggers</div>
+                                    </div>
+                                </button>
+                                <button class="phone-tab-btn" data-screen-src="tal2a-mobile-tryon.jpg">
+                                    <i class="fa-solid fa-shirt text-success"></i>
+                                    <div>
+                                        <strong>3. Category Browse & AI Try-On</strong>
+                                        <div class="small opacity-75">Curated dresses, jackets, and smart wardrobe visualization</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 pt-2">
+                            <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Frontend Frameworks</span>
+                            <span class="skill-tag"><i class="fa-solid fa-wand-magic"></i> AI Try-On Feature</span>
+                            <span class="skill-tag"><i class="fa-solid fa-cart-shopping"></i> E-Commerce Flow</span>
+                            <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Fast Responsive UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Smartphone Device Mockup -->
+                    <div class="col-lg-5 text-center">
+                        <div class="phone-device-mockup">
+                            <img id="activePhoneScreen" src="tal2a-mobile-home.jpg" alt="Tal2a Mobile Screen" class="phone-screen-img">
+                        </div>
+                        <p class="text-muted small mt-3">Interactive Smartphone Preview • Tal2a Mobile App</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</div>
+                <h2 class="display-6 fw-bold">Featured Projects</h2>
+                <p class="section-desc">Explore live projects across Mobile Applications, Power BI Analytics, Deep Learning & Web Systems.</p>
+            </div>
+
+            <!-- Interactive Filter Controls -->
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-border-all"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <i class="fa-solid fa-mobile-screen"></i> Mobile Apps
+                </button>
+                <button class="filter-btn" data-filter="analytics">
+                    <i class="fa-solid fa-chart-column"></i> Data Analytics & Power BI
+                </button>
+                <button class="filter-btn" data-filter="datascience">
+                    <i class="fa-solid fa-brain"></i> Data Science & AI
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fa-solid fa-globe"></i> Web Development
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row g-4" id="projectsGrid">
+                
+                <!-- Project 1: Mobile App (Tal2a) -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="mobile">
+                    <div class="project-card" 
+                         data-title="Tal2a — AI Fashion Mobile App"
+                         data-category-label="Mobile App Development"
+                         data-category-class="badge-mobile"
+                         data-img="tal2a-mobile-home.jpg"
+                         data-desc="Modern mobile fashion marketplace with curated local brand collections (Mobaco, Tie House) and integrated AI Try-On features."
+                         data-highlights='["Integrated AI Try-On outfit visualization", "Full e-commerce navigation: Home, Categories, Orders, Profile", "Search and category filtering across popular regional brands", "Clean, high-performance mobile UI"]'
+                         data-tags='["Mobile App", "Frontend Frameworks", "AI Try-On", "UI/UX", "REST APIs"]'>
+                        <div class="project-card-image-wrap mobile-frame">
+                            <img src="tal2a-mobile-home.jpg" alt="Tal2a Mobile App" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-mobile">📱 Mobile App</span>
+                            <h3 class="project-title">Tal2a — AI Fashion App</h3>
+                            <p class="project-description">
+                                Cross-platform mobile shopping app with AI-powered outfit try-on, modern cart checkout, and local Egyptian fashion brands.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">Mobile Frontend</span>
+                                <span class="project-tech-tag">AI Try-On</span>
+                                <span class="project-tech-tag">E-Commerce</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Retail Supply Chain & Sales Power BI Dashboard -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="analytics">
+                    <div class="project-card"
+                         data-title="North America Retail Supply Chain & Sales Analysis"
+                         data-category-label="Data Analytics & Power BI"
+                         data-category-class="badge-analytics"
+                         data-img="dashboard-retail-supply-chain.jpg"
+                         data-desc="Interactive enterprise Power BI dashboard monitoring regional sales, profit trends, return rates, orders volume, and sub-category performance."
+                         data-highlights='["Multi-level KPI tracking: Sales, Profit ($91.44K), Orders (3,512), and Returns", "Regional breakdown: West, East, South, Central with dynamic ranking overview", "Segment contribution analysis (Consumer 50.56%, Corporate 30.74%, Home Office)", "Interactive sub-category growth metrics and time series trendlines"]'
+                         data-tags='["Power BI", "DAX", "Supply Chain Analytics", "Executive Dashboard", "Business Intelligence"]'>
+                        <div class="project-card-image-wrap">
+                            <img src="dashboard-retail-supply-chain.jpg" alt="Retail Supply Chain Dashboard" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-analytics">📊 Power BI & Analytics</span>
+                            <h3 class="project-title">Retail Supply Chain Analytics</h3>
+                            <p class="project-description">
+                                Comprehensive executive Power BI dashboard analyzing sales velocity, profit margins, regional trends, and order fulfillment.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">Power BI</span>
+                                <span class="project-tech-tag">DAX</span>
+                                <span class="project-tech-tag">Supply Chain KPIs</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Financial Ratios Dashboard -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="analytics">
+                    <div class="project-card"
+                         data-title="Financial Ratios & Performance Intelligence Dashboard"
+                         data-category-label="Data Analytics & Finance"
+                         data-category-class="badge-analytics"
+                         data-img="dashboard-financial-ratios.jpg"
+                         data-desc="Advanced financial dashboard tracking key liquidity, leverage, and valuation ratios with multi-year time-series analysis."
+                         data-highlights='["Automated calculation of Current Ratio (2.01), Interest Coverage (1.67), and Asset Turnover (1.73)", "In-depth Leverage analysis: Debt-to-Equity (84%) and Debt-to-Asset (46%)", "Valuation benchmark tracking: P/E Ratio (11.35)", "Interactive longitudinal time series charting trends from 2020 through 2023"]'
+                         data-tags='["Power BI", "Financial Analytics", "Time Series", "Liquidity & Leverage", "KPI Dashboard"]'>
+                        <div class="project-card-image-wrap">
+                            <img src="dashboard-financial-ratios.jpg" alt="Financial Ratios Dashboard" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-analytics">📊 Financial Analytics</span>
+                            <h3 class="project-title">Financial Ratios Intelligence</h3>
+                            <p class="project-description">
+                                Interactive dashboard evaluating company health via Debt-to-Equity, Current Ratio, P/E ratio, and historical cycle volatility.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">Power BI</span>
+                                <span class="project-tech-tag">Financial KPIs</span>
+                                <span class="project-tech-tag">Time Series</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Regional Sales Target & Completion Hub -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="analytics">
+                    <div class="project-card"
+                         data-title="Regional Sales Target & Completion Analytics"
+                         data-category-label="Data Analytics & Reporting"
+                         data-category-class="badge-analytics"
+                         data-img="dashboard-sales-target.jpg"
+                         data-desc="Target completion intelligence platform comparing monthly and yearly operational targets against actual revenue across multi-city branches."
+                         data-highlights='["Dual-axis visual reporting of monthly targets vs actual completion rates", "Regional benchmark comparison: Hangzhou, Suzhou, Nanjing, Taizhou, Anhui", "Automated variance calculation and completion percentage metrics", "Clean tabular data layout for quick executive auditing"]'
+                         data-tags='["Power BI", "Target Tracking", "Variance Analysis", "Regional Metrics", "Data Visualization"]'>
+                        <div class="project-card-image-wrap">
+                            <img src="dashboard-sales-target.jpg" alt="Sales Target Analytics" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-analytics">📊 Performance Analytics</span>
+                            <h3 class="project-title">Regional Sales Target Hub</h3>
+                            <p class="project-description">
+                                Visual analytics tracking regional performance targets vs completion rates with automated monthly and yearly benchmarks.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">Power BI</span>
+                                <span class="project-tech-tag">KPI Tracking</span>
+                                <span class="project-tech-tag">Variance Modeling</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Sentiment Analysis & NLP Engine (Data Science) -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="datascience">
+                    <div class="project-card"
+                         data-title="AI Sentiment Analysis & NLP Engine"
+                         data-category-label="Data Science & Machine Learning"
+                         data-category-class="badge-datascience"
+                         data-img="sentiment_analysis.jpg"
+                         data-desc="Deep learning Natural Language Processing (NLP) system built with TensorFlow and Python to classify user feedback and extract sentiment signals."
+                         data-highlights='["TensorFlow deep learning architecture for text classification", "Natural Language Processing (tokenization, lemmatization, vectorization)", "Evaluated on multi-class sentiment benchmarks with confusion matrices", "Ready-to-deploy inference pipeline for production customer insights"]'
+                         data-tags='["TensorFlow", "Python", "NLP", "Machine Learning", "Deep Learning"]'>
+                        <div class="project-card-image-wrap">
+                            <img src="sentiment_analysis.jpg" alt="Sentiment Analysis" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-datascience">🧠 Data Science & AI</span>
+                            <h3 class="project-title">AI Sentiment Analysis NLP</h3>
+                            <p class="project-description">
+                                TensorFlow deep learning model performing real-time text analysis, sentiment scoring, and feature extraction on customer feedback.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">TensorFlow</span>
+                                <span class="project-tech-tag">Python NLP</span>
+                                <span class="project-tech-tag">Deep Learning</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Full-Stack E-Commerce Platform -->
+                <div class="col-md-6 col-lg-4 project-item-col" data-category="web">
+                    <div class="project-card"
+                         data-title="Full-Stack E-Commerce Web Platform"
+                         data-category-label="Software & Web Engineering"
+                         data-category-class="badge-web"
+                         data-img="ecommerce.jpg"
+                         data-desc="Scalable full-stack web application featuring dynamic catalog browsing, secure user authentication, shopping cart, and database persistence."
+                         data-highlights='["Component-driven frontend built with modern React.js architecture", "Robust backend RESTful APIs with Node.js and Express", "MongoDB database schema for products, orders, and user management", "Fully responsive layout across mobile, tablet, and desktop"]'
+                         data-tags='["React.js", "Node.js", "MongoDB", "Express", "REST APIs"]'>
+                        <div class="project-card-image-wrap">
+                            <img src="ecommerce.jpg" alt="E-Commerce Website" class="project-card-image">
+                            <div class="project-overlay">
+                                <button class="overlay-btn open-project-modal" title="View Details">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-category-badge badge-web">💻 Full-Stack Web</span>
+                            <h3 class="project-title">Full-Stack E-Commerce</h3>
+                            <p class="project-description">
+                                Robust online shopping platform with cart management, product filtering, responsive UI, and secure database architecture.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">React</span>
+                                <span class="project-tech-tag">Node.js</span>
+                                <span class="project-tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-footer-actions">
+                                <button class="btn-preview-details open-project-modal">
+                                    Preview Details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tech Stack -->
+    <section id="skills" class="py-5 my-4">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-toolbox"></i> Capabilities</div>
+                <h2 class="display-6 fw-bold">Skills & Technologies</h2>
+                <p class="section-desc">Tools and frameworks I use to build scalable apps and extract meaningful data intelligence.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Mobile Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skills-category-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="domain-icon-box icon-mobile mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Mobile Dev</h3>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <span class="skill-tag"><i class="fa-brands fa-react text-info"></i> Frontend Frameworks</span>
+                            <span class="skill-tag"><i class="fa-solid fa-paint-brush text-primary"></i> UI/UX Design</span>
+                            <span class="skill-tag"><i class="fa-solid fa-wand-magic text-warning"></i> AI Try-On</span>
+                            <span class="skill-tag"><i class="fa-solid fa-network-wired text-secondary"></i> REST APIs</span>
+                            <span class="skill-tag"><i class="fa-solid fa-rotate text-success"></i> State Management</span>
+                            <span class="skill-tag"><i class="fa-solid fa-cubes text-light"></i> Component Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skills-category-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="domain-icon-box icon-analytics mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Data Analytics</h3>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <span class="skill-tag"><i class="fa-solid fa-chart-column text-warning"></i> Power BI</span>
+                            <span class="skill-tag"><i class="fa-solid fa-calculator text-primary"></i> Advanced DAX</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database text-info"></i> SQL & Queries</span>
+                            <span class="skill-tag"><i class="fa-solid fa-table text-success"></i> Advanced Excel</span>
+                            <span class="skill-tag"><i class="fa-solid fa-diagram-project text-secondary"></i> Data Modeling</span>
+                            <span class="skill-tag"><i class="fa-solid fa-gauge-high text-danger"></i> KPI Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science & AI -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skills-category-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="domain-icon-box icon-science mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Data Science & AI</h3>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <span class="skill-tag"><i class="fa-solid fa-brain text-warning"></i> TensorFlow</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python text-info"></i> Python</span>
+                            <span class="skill-tag"><i class="fa-solid fa-table-cells text-primary"></i> Pandas & NumPy</span>
+                            <span class="skill-tag"><i class="fa-solid fa-robot text-success"></i> Machine Learning</span>
+                            <span class="skill-tag"><i class="fa-solid fa-comment-dots text-secondary"></i> NLP & Sentiment</span>
+                            <span class="skill-tag"><i class="fa-solid fa-microchip text-light"></i> Scikit-Learn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software & Web -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skills-category-card">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="domain-icon-box icon-software mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Software & Web</h3>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <span class="skill-tag"><i class="fa-brands fa-js text-warning"></i> JavaScript (ES6+)</span>
+                            <span class="skill-tag"><i class="fa-brands fa-react text-info"></i> React.js</span>
+                            <span class="skill-tag"><i class="fa-brands fa-node text-success"></i> Node.js & Express</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database text-success"></i> MongoDB</span>
+                            <span class="skill-tag"><i class="fa-brands fa-git-alt text-danger"></i> Git & GitHub</span>
+                            <span class="skill-tag"><i class="fa-brands fa-docker text-primary"></i> Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> Connect</div>
+                <h2 class="display-6 fw-bold">Let's Work Together</h2>
+                <p class="section-desc">Have a mobile app to build, dashboards to design, or a machine learning model to develop? Let's connect!</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Email Card -->
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon icon-bg-email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="h5 mb-2">Email</h4>
+                        <p class="text-muted small mb-2">Drop me a line anytime</p>
+                        <a href="mailto:omarashraf1392@gmail.com" class="text-light fw-semibold text-decoration-none d-block text-break">
+                            omarashraf1392@gmail.com
+                        </a>
+                        <button class="copy-btn copy-trigger" data-copy="omarashraf1392@gmail.com">
+                            <i class="fa-regular fa-copy"></i> Copy Email
+                        </button>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon icon-bg-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h4 class="h5 mb-2">WhatsApp</h4>
+                        <p class="text-muted small mb-2">Fast direct chat</p>
+                        <a href="https://wa.me/201122250091" target="_blank" rel="noopener noreferrer" class="text-light fw-semibold text-decoration-none d-block">
+                            +20 112 225 0091
+                        </a>
+                        <button class="copy-btn copy-trigger" data-copy="+201122250091">
+                            <i class="fa-regular fa-copy"></i> Copy Number
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon icon-bg-github">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h4 class="h5 mb-2">GitHub</h4>
+                        <p class="text-muted small mb-2">Check my open-source code</p>
+                        <a href="https://github.com/Omarashrafabdelghafour" target="_blank" rel="noopener noreferrer" class="text-light fw-semibold text-decoration-none d-block text-break">
+                            Omarashrafabdelghafour
+                        </a>
+                        <a href="https://github.com/Omarashrafabdelghafour" target="_blank" rel="noopener noreferrer" class="copy-btn text-decoration-none d-inline-block">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">
+                <span class="fw-bold text-light">Omar Ashraf</span> • Software Engineer &bull; Mobile Developer &bull; Data Analyst &bull; Data Scientist
+            </p>
+            <p class="small text-muted mb-0">
+                &copy; 2026 Omar Ashraf. All rights reserved. Crafted with clean code and modern design.
+            </p>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Interactive Lightbox Modal for Project Details -->
+    <div class="modal fade modal-custom" id="projectPreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <span id="modalProjectCategory" class="project-category-badge badge-mobile mb-1">Category</span>
+                        <h3 class="modal-title h5 mb-0" id="modalProjectTitle">Project Title</h3>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img-container">
+                        <img id="modalProjectImg" src="" alt="Project Preview">
+                        <div class="modal-zoom-controls">
+                            <button type="button" class="zoom-btn" id="modalZoomOut" title="Zoom Out"><i class="fa-solid fa-minus"></i></button>
+                            <button type="button" class="zoom-btn" id="modalZoomReset" title="Reset Zoom"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            <button type="button" class="zoom-btn" id="modalZoomIn" title="Zoom In"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <p id="modalProjectDesc" class="text-light mb-3"></p>
+                    <h4 class="h6 text-uppercase text-muted fw-bold mb-2">Key Highlights & Features:</h4>
+                    <ul id="modalProjectHighlights" class="domain-features mb-4"></ul>
+                    <h4 class="h6 text-uppercase text-muted fw-bold mb-2">Technologies Used:</h4>
+                    <div id="modalProjectTags" class="d-flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotice" class="toast-notice">
+        <i class="fa-solid fa-circle-check text-success"></i>
+        <span id="toastMessage">Copied to clipboard!</span>
+    </div>
+
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Interactive JS -->
+    <script src="script.js"></script>
 </body>
 </html>

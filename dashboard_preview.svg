@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="barGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+    <filter id="dbGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#dbBg)" />
+
+  <!-- Background subtle glow -->
+  <circle cx="150" cy="180" r="160" fill="#3b82f6" opacity="0.12" filter="url(#dbGlow)" />
+  <circle cx="650" cy="320" r="160" fill="#a855f7" opacity="0.12" filter="url(#dbGlow)" />
+
+  <!-- Top App Navigation / Bar -->
+  <g transform="translate(40, 25)">
+    <rect width="720" height="45" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="25" cy="22" r="5" fill="#ef4444" />
+    <circle cx="42" cy="22" r="5" fill="#f59e0b" />
+    <circle cx="59" cy="22" r="5" fill="#10b981" />
+    <rect x="90" y="15" width="160" height="15" rx="5" fill="#0f172a" />
+    <text x="100" y="26" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Executive Analytics KPI Hub</text>
+    <rect x="580" y="14" width="75" height="18" rx="9" fill="#3b82f6" />
+    <text x="592" y="26" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Live Data</text>
+    <circle cx="680" cy="22" r="10" fill="#475569" />
+  </g>
+
+  <!-- 3 KPI Cards -->
+  <g transform="translate(40, 85)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="225" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Total Revenue Tracked</text>
+    <text x="18" y="55" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="700">$2,458,900</text>
+    <text x="18" y="73" fill="#10b981" font-family="system-ui, sans-serif" font-size="11" font-weight="600">▲ +18.4% vs last mo</text>
+    <circle cx="195" cy="35" r="16" fill="#3b82f6" opacity="0.2" />
+
+    <!-- KPI 2 -->
+    <rect x="247" y="0" width="225" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="265" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Active User Growth</text>
+    <text x="265" y="55" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="700">148,220</text>
+    <text x="265" y="73" fill="#10b981" font-family="system-ui, sans-serif" font-size="11" font-weight="600">▲ +24.1% retention</text>
+    <circle cx="442" cy="35" r="16" fill="#10b981" opacity="0.2" />
+
+    <!-- KPI 3 -->
+    <rect x="495" y="0" width="225" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="513" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Model Accuracy / Conversion</text>
+    <text x="513" y="55" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="700">96.8%</text>
+    <text x="513" y="73" fill="#6366f1" font-family="system-ui, sans-serif" font-size="11" font-weight="600">● 1.2M queries analyzed</text>
+    <circle cx="690" cy="35" r="16" fill="#a855f7" opacity="0.2" />
+  </g>
+
+  <!-- Big Trend Chart (Left) -->
+  <g transform="translate(40, 185)">
+    <rect width="455" height="280" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Performance Over Time & Forecast</text>
+    <text x="20" y="48" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Data Science predictive trend line & historical metrics</text>
+
+    <!-- Grid lines -->
+    <line x1="30" y1="90" x2="425" y2="90" stroke="#334155" stroke-width="0.7" stroke-dasharray="4 4" />
+    <line x1="30" y1="140" x2="425" y2="140" stroke="#334155" stroke-width="0.7" stroke-dasharray="4 4" />
+    <line x1="30" y1="190" x2="425" y2="190" stroke="#334155" stroke-width="0.7" stroke-dasharray="4 4" />
+    <line x1="30" y1="240" x2="425" y2="240" stroke="#334155" stroke-width="0.7" />
+
+    <!-- Area under curve -->
+    <path d="M 30 220 Q 90 190, 140 160 T 250 170 T 350 110 L 425 90 L 425 240 L 30 240 Z" fill="url(#areaGrad)" />
+    <!-- Cyan line -->
+    <path d="M 30 220 Q 90 190, 140 160 T 250 170 T 350 110 L 425 90" fill="none" stroke="#06b6d4" stroke-width="3" />
+
+    <!-- Indigo secondary line -->
+    <path d="M 30 235 Q 90 210, 140 200 T 250 190 T 350 150 L 425 130" fill="none" stroke="#818cf8" stroke-width="2" stroke-dasharray="3 3" />
+
+    <!-- Dots -->
+    <circle cx="140" cy="160" r="4" fill="#06b6d4" stroke="#ffffff" stroke-width="2" />
+    <circle cx="250" cy="170" r="4" fill="#06b6d4" stroke="#ffffff" stroke-width="2" />
+    <circle cx="350" cy="110" r="4" fill="#06b6d4" stroke="#ffffff" stroke-width="2" />
+    <circle cx="425" cy="90" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+
+    <!-- X labels -->
+    <text x="30" y="260" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Jan</text>
+    <text x="100" y="260" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Mar</text>
+    <text x="180" y="260" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Jun</text>
+    <text x="260" y="260" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Sep</text>
+    <text x="340" y="260" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Nov</text>
+    <text x="410" y="260" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10">Predicted</text>
+  </g>
+
+  <!-- Distribution & Bar Chart (Right) -->
+  <g transform="translate(510, 185)">
+    <rect width="250" height="280" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="30" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Category Segmentation</text>
+
+    <!-- Bar items -->
+    <g transform="translate(20, 50)">
+      <text x="0" y="15" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Segment A (Direct)</text>
+      <text x="170" y="15" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">78%</text>
+      <rect x="0" y="22" width="210" height="8" rx="4" fill="#0f172a" />
+      <rect x="0" y="22" width="164" height="8" rx="4" fill="url(#barGrad1)" />
+
+      <text x="0" y="55" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Segment B (Referral)</text>
+      <text x="170" y="55" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">62%</text>
+      <rect x="0" y="62" width="210" height="8" rx="4" fill="#0f172a" />
+      <rect x="0" y="62" width="130" height="8" rx="4" fill="url(#barGrad2)" />
+
+      <text x="0" y="95" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Segment C (Organic)</text>
+      <text x="170" y="95" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">45%</text>
+      <rect x="0" y="102" width="210" height="8" rx="4" fill="#0f172a" />
+      <rect x="0" y="102" width="95" height="8" rx="4" fill="#10b981" />
+
+      <text x="0" y="135" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Segment D (Campaigns)</text>
+      <text x="170" y="135" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">34%</text>
+      <rect x="0" y="142" width="210" height="8" rx="4" fill="#0f172a" />
+      <rect x="0" y="142" width="71" height="8" rx="4" fill="#f59e0b" />
+    </g>
+
+    <!-- Mini Donut at bottom right -->
+    <g transform="translate(30, 225)">
+      <circle cx="25" cy="20" r="18" fill="none" stroke="#334155" stroke-width="6" />
+      <circle cx="25" cy="20" r="18" fill="none" stroke="#06b6d4" stroke-width="6" stroke-dasharray="75 40" stroke-linecap="round" />
+      <text x="60" y="16" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="600">BI Insight</text>
+      <text x="60" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">99.4% Data Quality Score</text>
+    </g>
+  </g>
+</svg>
+
